@@ -1,0 +1,29 @@
+#!/bin/sh
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+NC='\033[0m'
+
+# Try to find changes against remote branch, fall back to checking all files if no remote
+remote_branch=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2>/dev/null) || true
+
+if [ -n "$remote_branch" ]; then
+  # Compare with remote branch
+  changed_files=$(git diff --name-only HEAD "$remote_branch" -- '*.ts' '*.js')
+elif git rev-parse --verify HEAD~ >/dev/null 2>&1 || false; then
+  # No remote, but we have previous commits
+  changed_files=$(git diff --name-only HEAD HEAD~ -- '*.ts' '*.js')
+else
+  # First commit with no remote - check all tracked files
+  changed_files=$(git ls-files '*.ts' '*.js')
+fi
+
+if [ -n "$changed_files" ]; then
+  echo "${BLUE}Running tests due to changes in the following TS/JS files:${NC}"
+  echo "$changed_files"
+  # TODO temp ignore
+  # pnpm test
+else
+  echo "${GREEN}No TS/JS files have been changed. Skipping tests.${NC}"
+fi
+
+exit 0

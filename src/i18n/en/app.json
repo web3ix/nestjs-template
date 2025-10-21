@@ -1,0 +1,20 @@
+{
+  "unique": {
+    "username": "User already exists",
+    "email": "User already exists"
+  },
+  "validation": {
+    "is_empty": "Field is required",
+    "insufficient_balance": "Insufficient balance",
+    "payment_method_required": "Payment method is required"
+  },
+  "error": {
+    "email_exists": "Account with this email already exists",
+    "not_found": "User not found",
+    "email_not_verify": "Email is not verified",
+    "invalid_password": "Invalid password",
+    "invalid_token": "Invalid token",
+    "network_not_supported": "Network is not supported",
+    "method_not_supported": "The payment method is not supported"
+  }
+}

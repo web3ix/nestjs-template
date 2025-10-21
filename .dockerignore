@@ -1,0 +1,14 @@
+# Git and OS files
+.git
+.gitignore
+.DS_Store
+
+# Docker files
+Dockerfile
+.dockerignore
+
+# Local development
+node_modules
+dist
+.env
+npm-debug.log
