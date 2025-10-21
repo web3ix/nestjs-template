@@ -1,15 +1,14 @@
-import { defaultTheme } from '@vuepress/theme-default'
-import { defineUserConfig } from 'vuepress/cli'
-import { viteBundler } from '@vuepress/bundler-vite'
-import { searchPlugin } from '@vuepress/plugin-search'
-import { markdownImagePlugin } from '@vuepress/plugin-markdown-image'
-import { markdownTabPlugin } from '@vuepress/plugin-markdown-tab'
-import { mdEnhancePlugin } from 'vuepress-plugin-md-enhance'
+import { viteBundler } from '@vuepress/bundler-vite';
+import { searchPlugin } from '@vuepress/plugin-search';
+import { defaultTheme } from '@vuepress/theme-default';
+import { mdEnhancePlugin } from 'vuepress-plugin-md-enhance';
+import { defineUserConfig } from 'vuepress/cli';
 
 export default defineUserConfig({
   lang: 'en-US',
   title: 'NestJS Boilerplate',
-  description: 'High-performance, domain-driven NestJS boilerplate for scalable microservices',
+  description:
+    'High-performance, domain-driven NestJS boilerplate for scalable microservices',
 
   base: '/nestjs-template/',
 
@@ -107,13 +106,6 @@ export default defineUserConfig({
         },
       },
     }),
-    markdownImagePlugin({
-      figure: true,
-      lazyload: true,
-      mark: true,
-      size: true,
-    }),
-    markdownTabPlugin(),
     mdEnhancePlugin({
       align: true,
       attrs: true,
@@ -124,4 +116,4 @@ export default defineUserConfig({
       tasklist: true,
     }),
   ],
-})
+});
