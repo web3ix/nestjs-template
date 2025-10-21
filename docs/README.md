@@ -1,7 +1,7 @@
 ---
 home: true
 title: Home
-heroImage: /images/logo.png
+heroImage: /images/logo.svg
 heroText: NestJS Boilerplate
 tagline: High-performance, domain-driven NestJS boilerplate for scalable microservices
 actions:
@@ -107,36 +107,42 @@ src/
 ## Key Features
 
 ### 🔐 Authentication & Authorization
+
 - JWT-based authentication with refresh tokens
 - Role-based access control (RBAC)
 - Google OAuth integration
 - Session management with Redis
 
 ### 🗄️ Database
+
 - Drizzle ORM with TypeScript support
 - PostgreSQL for production
 - SQLite for local development
 - Type-safe queries and migrations
 
 ### ⚡ Performance
+
 - Redis caching with fallback to memory
 - Fastify adapter for low overhead
 - Request/response compression
 - Efficient query optimization
 
 ### 🔄 Real-time & Background Jobs
+
 - WebSocket support with Socket.IO
 - BullMQ for distributed job queues
 - Event-driven architecture
 - Distributed locks
 
 ### 📊 Monitoring & Observability
+
 - Health checks
 - Structured logging with Pino
 - Request tracing
 - Error tracking
 
 ### 🧪 Testing
+
 - Unit tests with Jest
 - Integration tests
 - E2E tests
@@ -149,4 +155,4 @@ src/
 
 ## License
 
-MIT © [manhtrv](https://github.com/web3ix)
+MIT © [manhtrv](https://github.com/manhtrv)

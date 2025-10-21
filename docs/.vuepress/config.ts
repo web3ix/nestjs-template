@@ -13,7 +13,7 @@ export default defineUserConfig({
   base: '/nestjs-template/',
 
   theme: defaultTheme({
-    logo: '/images/logo.png',
+    logo: '/images/logo.svg',
     repo: 'web3ix/nestjs-template',
     docsDir: 'docs',
     docsBranch: 'main',
@@ -59,6 +59,10 @@ export default defineUserConfig({
             '/guide/websockets.md',
             '/guide/workers.md',
           ],
+        },
+        {
+          text: 'Development',
+          children: ['/guide/adding-features.md'],
         },
       ],
       '/architecture/': [
