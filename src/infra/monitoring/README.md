@@ -1,1 +1,0 @@
-// Monitoring integrations (Prometheus, OpenTelemetry)
